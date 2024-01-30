@@ -1,6 +1,11 @@
 
 let globals = {
-    code_editor:false,
-    compilation:""
+    code_editor:false
 }
-let elements = []
+let structs = [
+    {
+        name:"Test",
+        implement_array:false,
+        propeties:[]
+    }
+]

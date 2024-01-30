@@ -12,21 +12,27 @@
         tomato_start()
     </script>
     <script src="globals.js"></script>
+    <script src="code_generator.js"></script>
+
 </head>
 <body>
     <div  Aposition="$16:9(0%,0%,50vw,100vw)">
         
-        <div for="x" in="elements" Aposition="$16:9(10%,+5%,80%,10%)">
-                
+        <div for="x" in="structs" Aposition="$16:9(10%,+5%,80%,10%)">
+              <h5>Nmae</h5>
+              <input
+                      set_value="this.x()['name']"
+                      onchange="this.x()['name'] = this.value"
+              >
               
         </div>
 
-        <button onclick="elements.push({})">Add Element</button>
+        <button onclick="structs.push({})">Add Element</button>
   
     </div>
     <div  Aposition="$16:9(50vw,0%,50vw,100vw)">
         <code>
-            <pre print="globals.compilation">
+            <pre print="generate_code()">
             </pre>
         </code>
     </div>
